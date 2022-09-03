@@ -1,0 +1,6 @@
+[submodule "modules/MMM-Vasttrafik-PublicTransport"]
+	path = modules/MMM-Vasttrafik-PublicTransport
+	url = git@github.com:bureus/MMM-Vasttrafik-PublicTransport.git
+[submodule "modules/MMM-Weather-SMHI-Hourly"]
+	path = modules/MMM-Weather-SMHI-Hourly
+	url = git@github.com:Menturan/MMM-Weather-SMHI-Hourly.git
