@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - config:/opt/magic_mirror/config
-      - modules:/opt/magic_mirror/modules
+      - ./config:/opt/magic_mirror/config
+      - ./modules:/opt/magic_mirror/modules
     ports:
       - 8080:8080
