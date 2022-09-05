@@ -2,11 +2,19 @@ version: '3'
 services:
   magicmirror:
     container_name: magicmirror
-    image: bastilimbach/docker-magicmirror
+    image: karsten13/magicmirror
     restart: unless-stopped
     volumes:
-      - /etc/localtime:/etc/localtime:ro
       - ./config:/opt/magic_mirror/config
       - ./modules:/opt/magic_mirror/modules
+      - ./css:/opt/magic_mirror/css
     ports:
       - 8080:8080
+    command:
+      - npm
+      - run
+      - server
+    environment:
+      - VASTTRAFIK_STOP_ID=${VASTTRAFIK_STOP_ID}
+      - VASTTRAFIK_APP_KEY=${VASTTRAFIK_APP_KEY}
+      - VASTTRAFIK_APP_SEC=${VASTTRAFIK_APP_SEC}

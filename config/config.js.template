@@ -1,4 +1,9 @@
-var localConfig = require('dotenv').config();
+// This is the configuration file for MagicMirror2.
+//
+// From: https://khassel.gitlab.io/magicmirror/configuration/#config-modules-and-custom-css
+// When the container starts, the config.js will be created using the config.js.template.
+//
+// Author: Kalle Strålman
 
 var config = {
 	address: "0.0.0.0",
@@ -29,9 +34,9 @@ var config = {
 			position: "top_left",
 			header: "Västtrafik",
 			config: {
-			     stopIds: [process.env.VASTTRAFIK_STOP_ID],
-			     appKey: process.env.VASTTRAFIK_APP_KEY,
-			     appSecret: process.env.VASTTRAFIK_APP_SEC,
+			     stopIds: ["${VASTTRAFIK_STOP_ID}"],
+			     appKey: "${VASTTRAFIK_APP_KEY}",
+			     appSecret: "${VASTTRAFIK_APP_SEC}",
 			     debug: false,
 			     sortBy: "track",
 			     refreshRate: "20000",

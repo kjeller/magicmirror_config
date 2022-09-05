@@ -1,1 +1,12 @@
 *.swp
+.env
+
+# config.js is generated from config.js.template
+config/config.js
+config/config.js-old
+
+# copied css files from MagicMirror repo
+css/main.css
+
+# copied default modules from MagicMirror repo
+modules/default
