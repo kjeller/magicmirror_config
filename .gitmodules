@@ -4,3 +4,6 @@
 [submodule "modules/MMM-Weather-SMHI-Hourly"]
 	path = modules/MMM-Weather-SMHI-Hourly
 	url = git@github.com:Menturan/MMM-Weather-SMHI-Hourly.git
+[submodule "secret"]
+	path = secret
+	url = git@github.com:kjeller/magicmirror_secret.git
