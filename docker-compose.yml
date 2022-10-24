@@ -2,19 +2,29 @@ version: '3'
 services:
   magicmirror:
     container_name: magicmirror
-    image: karsten13/magicmirror
+    image: karsten13/magicmirror:latest
     restart: unless-stopped
+    shm_size: "128mb"
     volumes:
       - ./config:/opt/magic_mirror/config
       - ./modules:/opt/magic_mirror/modules
       - ./css:/opt/magic_mirror/css
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /opt/vc:/opt/vc/:ro
+      - /usr/bin/vcgencmd:/usr/bin/vcgencmd
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
+    devices:
+      - /dev/vchiq
     ports:
       - 8080:8080
     command:
       - npm
       - run
-      - server
+      - start
     environment:
       - VASTTRAFIK_STOP_ID=${VASTTRAFIK_STOP_ID}
       - VASTTRAFIK_APP_KEY=${VASTTRAFIK_APP_KEY}
       - VASTTRAFIK_APP_SEC=${VASTTRAFIK_APP_SEC}
+      - LD_LIBRARY_PATH=/opt/vc/lib
+      - DISPLAY=unix:0.0
+
