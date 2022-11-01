@@ -73,9 +73,9 @@ var config = {
       position: "top_left",
       header: "Väder",
       config: {
-      lon: "11.96679",
-      lat: "57.707161",
-      hours: 12
+        lon: "11.96679",
+        lat: "57.707161",
+        hours: 12
       }
     },
     // TODO Add chaning background images at a fixed interval
