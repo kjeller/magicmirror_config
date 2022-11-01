@@ -34,24 +34,24 @@ var config = {
       position: "top_left",
       header: "Västtrafik",
       config: {
-           stopIds: ["${VASTTRAFIK_STOP_ID}"],
-           appKey: "${VASTTRAFIK_APP_KEY}",
-           appSecret: "${VASTTRAFIK_APP_SEC}",
-           debug: false,
-           sortBy: "track",
-           refreshRate: "20000",
-           trafficSituations: true,
-           board: {
-        destination: {
+        stopIds: Array.from(${VASTTRAFIK_STOP_ID}),
+        appKey: "${VASTTRAFIK_APP_KEY}",
+        appSecret: "${VASTTRAFIK_APP_SEC}",
+        debug: false,
+        sortBy: "track",
+        refreshRate: "20000",
+        trafficSituations: true,
+        board: {
+          destination: {
             maxPxWidth: 150
-        }, 
-          },
-          showTrackNumbers: true,
-          showStopHeader: true,
-          showDestinationName: true, 
-          filterAttr: "track",
-          filterKey: "A",
-          enableDepartureTimeColors: false,
+          }, 
+        },
+        showTrackNumbers: true,
+        showStopHeader: true,
+        showDestinationName: true,
+        filterAttr: "track",
+        filterKey: "A", 
+        enableDepartureTimeColors: false,
       }
     },
     {
