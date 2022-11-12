@@ -5,6 +5,8 @@ services:
     image: karsten13/magicmirror:latest
     restart: unless-stopped
     shm_size: "128mb"
+    env_file:
+      - ./secret/secret.env
     volumes:
       - ./config:/opt/magic_mirror/config
       - ./modules:/opt/magic_mirror/modules
@@ -22,9 +24,6 @@ services:
       - run
       - start
     environment:
-      - VASTTRAFIK_STOP_ID=${VASTTRAFIK_STOP_ID}
-      - VASTTRAFIK_APP_KEY=${VASTTRAFIK_APP_KEY}
-      - VASTTRAFIK_APP_SEC=${VASTTRAFIK_APP_SEC}
       - LD_LIBRARY_PATH=/opt/vc/lib
       - DISPLAY=unix:0.0
 

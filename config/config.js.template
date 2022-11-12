@@ -55,15 +55,14 @@ var config = {
       }
     },
     {
-      // TODO Change to google calendar sync
       module: "calendar",
-      header: "US Holidays",
+      header: "Delad kalender",
       position: "top_left",
       config: {
         calendars: [
           {
-            symbol: "calendar-check",
-            url: "webcal://www.calendarlabs.com/ical-calendar/ics/76/US_Holidays.ics"
+            symbol: "calendar",
+            url: "${CALENDAR_URL_SEC}"
           }
         ]
       }
@@ -78,7 +77,6 @@ var config = {
         hours: 12
       }
     },
-    // TODO Add chaning background images at a fixed interval
   ]
 };
 
