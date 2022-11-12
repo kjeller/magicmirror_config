@@ -4,7 +4,7 @@
 
 # Run MM as webserver
 
-`./start server`
+`./start.sh server`
 
 A web server should now be available on localhost:8080
 
